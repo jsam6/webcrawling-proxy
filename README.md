@@ -10,6 +10,8 @@ To implement proxies with request module.
 
 ## Getting Started
 
+List of available proxies are retrieved from https://raw.githubusercontent.com/fate0/proxylist/master/proxy.list
+
 ```python
 import requests
 from proxy import CrawlerProxy
