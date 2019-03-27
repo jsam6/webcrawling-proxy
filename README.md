@@ -10,17 +10,23 @@ To implement proxies with request module.
 
 ## Getting Started
 
-```
+```python
 import requests
 from proxy import CrawlerProxy
 from requests.exceptions import ProxyError
 
-mCrawlerProxy = CrawlerProxy()
 link = "insert url"
+
+mCrawlerProxy = CrawlerProxy()
+
 mProxy = mCrawlerProxy.getProxy(link)
+
 mUserAgent = mCrawlerProxy.getUserAgent()
+
 print(mProxy)
+
 print(mUserAgent)
+
 headers = {
     'User-Agent': str(mUserAgent),
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
@@ -28,14 +34,14 @@ headers = {
     'Accept-Language': 'en-US,en;q=0.9',
 }
 
+# proxies and useragent generated will be used when requests are made.
 respond = requests.get(url=link, proxies=mProxy, headers=headers)
+
 print(respond)
 
-
-while True"
+while True
 	try:
 		# DO something
-
 	except ProxyError:
         mProxy = mCrawlerProxy.getProxy(mainlink) # Get new proxy if fail
         continue
