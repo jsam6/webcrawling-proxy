@@ -43,7 +43,7 @@ while True
 	try:
 		# DO something
 	except ProxyError:
-        mProxy = mCrawlerProxy.getProxy(mainlink) # Get new proxy if fail
+        mProxy = mCrawlerProxy.getProxy(link) # Get new proxy if fail
         continue
 
 
