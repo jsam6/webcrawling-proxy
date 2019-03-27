@@ -34,17 +34,15 @@ headers = {
     'Accept-Language': 'en-US,en;q=0.9',
 }
 
-# proxies and useragent generated will be used when requests are made.
-respond = requests.get(url=link, proxies=mProxy, headers=headers)
 
-print(respond)
+try:
+	# proxies and useragent generated will be used when requests are made.
+	respond = requests.get(url=link, proxies=mProxy, headers=headers)
 
-while True
-	try:
-		# DO something
-	except ProxyError:
-        mProxy = mCrawlerProxy.getProxy(mainlink) # Get new proxy if fail
-        continue
+	print(respond)
+except ProxyError:
+    mProxy = mCrawlerProxy.getProxy(link) # Get new proxy if fail
+    continue
 
 
 ```
